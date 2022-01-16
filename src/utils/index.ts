@@ -1,1 +1,1 @@
-export * from './pbcopy'
+export * from './pbcopy';

@@ -3,6 +3,9 @@
 	"version": "0.0.1",
 	"main": "lib/index.js",
 	"types": "lib/index.d.ts",
+	"bin": {
+		"kiwi-scripts": "lib/index.js"
+	},
 	"repository": "git@github.com:kiwi-lib/scripts.git",
 	"author": "Whitekiwi <jh145478@gmail.com>",
 	"scripts": {
@@ -10,9 +13,10 @@
 		"test": "jest --forceExit",
 		"test:watch": "jest --watch",
 		"test:cov": "jest --coverage --forceExit",
-		"build": "tsc",
+		"build": "rm -rf lib && tsc",
 		"start": "ts-node src/index.ts",
-		"script": "ts-node .scripts/index.ts"
+		"script": "ts-node .scripts/index.ts",
+		"register": "yarn run script register"
 	},
 	"dependencies": {
 		"@yarnpkg/pnpify": "^3.1.1-rc.10",

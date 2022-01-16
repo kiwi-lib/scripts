@@ -1,7 +1,7 @@
 import { Command } from '@core/types';
 import { dirnameCmd } from './impl';
 
-const commands: Command[] = [dirnameCmd];
+export const commands: Command[] = [dirnameCmd];
 const commandMap: Record<string, Command | undefined> = commands.reduce(
 	(prev: Record<string, Command>, curr: Command) => {
 		prev[curr.command] = curr;
